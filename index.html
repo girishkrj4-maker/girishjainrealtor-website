@@ -226,6 +226,19 @@ footer{background:var(--ink);padding:2.5rem;display:flex;align-items:center;just
 .reveal{opacity:0;transform:translateY(24px);transition:opacity 0.6s,transform 0.6s;}
 .reveal.in{opacity:1;transform:none;}
 
+/* AREAS WE SERVE */
+#areas{background:#fff;}
+.areas-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:2px solid var(--ink);margin-top:2rem;}
+.area-card{display:block;padding:1.5rem 1rem;border-right:2px solid var(--border);text-decoration:none;transition:background 0.2s;text-align:center;}
+.area-card:last-child{border-right:none;}
+.area-card:hover{background:var(--navy);}
+.area-card:hover .area-name,.area-card:hover .area-county{color:#fff;}
+.area-name{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:var(--ink);line-height:1;}
+.area-county{font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-top:0.3rem;}
+
+/* STICKY MOBILE CALL / WHATSAPP BAR — hidden on desktop */
+.sticky-cta{display:none;}
+
 /* MOBILE */
 @media(max-width:880px){
   nav{padding:0 1.25rem;}
@@ -238,6 +251,14 @@ footer{background:var(--ink);padding:2.5rem;display:flex;align-items:center;just
   .sale-card,.testi-card{border-right:none;border-bottom:2px solid var(--border);}
   footer{flex-direction:column;text-align:center;}
   .hf-row,.cf-row{grid-template-columns:1fr;}
+  .areas-grid{grid-template-columns:1fr;}
+  .area-card{border-right:none;border-bottom:2px solid var(--border);}
+  .area-card:last-child{border-bottom:none;}
+  body{padding-bottom:60px;}
+  .sticky-cta{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:300;background:var(--navy);border-top:2px solid var(--orange);}
+  .sticky-cta a{flex:1;text-align:center;color:#fff;text-decoration:none;font-size:0.8rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:1.05rem 0.5rem;}
+  .sticky-cta a:first-child{border-right:1px solid rgba(255,255,255,0.15);}
+  .sticky-cta a.cta-wa{background:var(--orange);}
 }
 </style>
 </head>
@@ -548,6 +569,22 @@ footer{background:var(--ink);padding:2.5rem;display:flex;align-items:center;just
   </div>
 </section>
 
+<!-- AREAS WE SERVE -->
+<section id="areas">
+  <div class="sec-inner">
+    <p class="sec-ey">Areas We Serve</p>
+    <h2 class="sec-h">Local Expertise, <span class="acc">Town by Town.</span></h2>
+    <p class="sec-body">I work these communities every day — as a Realtor with Tesla Realty Group and as a Loan Factory mortgage loan officer. Pick your town for buyer, seller, and investor guidance.</p>
+    <div class="areas-grid reveal">
+      <a class="area-card" href="/media-pa.html"><div class="area-name">Media</div><div class="area-county">Delaware Co, PA</div></a>
+      <a class="area-card" href="/brookhaven-pa.html"><div class="area-name">Brookhaven</div><div class="area-county">Delaware Co, PA</div></a>
+      <a class="area-card" href="/breinigsville-pa.html"><div class="area-name">Breinigsville</div><div class="area-county">Lehigh Valley, PA</div></a>
+      <a class="area-card" href="/west-chester-pa.html"><div class="area-name">West Chester</div><div class="area-county">Chester Co, PA</div></a>
+      <a class="area-card" href="/glen-mills-pa.html"><div class="area-name">Glen Mills</div><div class="area-county">Delaware &amp; Chester Co, PA</div></a>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact">
   <div class="sec-inner">
@@ -608,6 +645,12 @@ footer{background:var(--ink);padding:2.5rem;display:flex;align-items:center;just
   </ul>
   <div class="f-copy">© 2026 Girish Jain · 941 N Providence Rd, Media PA 19063<br/>Mortgage Loan Officer · Loan Factory · NMLS #2862446<br/>(248) 421-7915 · girishjainrealtor@gmail.com</div>
 </footer>
+
+<!-- STICKY MOBILE CALL / WHATSAPP BAR (mobile only, via media query) -->
+<div class="sticky-cta">
+  <a href="tel:+12484217915">📞 Call</a>
+  <a class="cta-wa" href="https://wa.me/12484217915" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
 
 <script>
 const els = document.querySelectorAll('.reveal');

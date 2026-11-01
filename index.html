@@ -260,6 +260,32 @@ footer{background:var(--ink);padding:2.5rem;display:flex;align-items:center;just
   .sticky-cta a:first-child{border-right:1px solid rgba(255,255,255,0.15);}
   .sticky-cta a.cta-wa{background:var(--orange);}
 }
+
+/* FORMS PANEL + MOBILE FORMS SHEET — added on forms-hub branch */
+.forms-panel{position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:250;width:216px;background:var(--navy);border-left:3px solid var(--orange);color:#fff;padding:1rem 1rem 1.1rem;box-shadow:-4px 0 24px rgba(0,0,0,0.25);}
+.forms-panel[hidden]{display:none;}
+.forms-panel h3{font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--orange2);margin-bottom:0.75rem;}
+.forms-panel a.fp-link{display:block;color:#fff;text-decoration:none;font-size:0.82rem;font-weight:600;line-height:1.35;padding:0.55rem 0.6rem;border:1px solid rgba(255,255,255,0.18);margin-bottom:0.45rem;}
+.forms-panel a.fp-link:hover{background:var(--orange);border-color:var(--orange);}
+.forms-panel a.fp-link:last-of-type{margin-bottom:0.75rem;}
+.fp-close{background:none;border:none;color:rgba(255,255,255,0.6);font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;padding:0;}
+.fp-close:hover{color:#fff;}
+.forms-tab{display:none;position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:250;background:var(--orange);color:#fff;border:none;font-family:'Barlow',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;writing-mode:vertical-rl;padding:1rem 0.55rem;cursor:pointer;}
+.forms-tab[hidden]{display:none;}
+.forms-fab{display:none;}
+.forms-sheet{display:none;}
+@media(min-width:881px){
+  .forms-tab.show{display:block;}
+}
+@media(max-width:880px){
+  .forms-panel,.forms-tab{display:none!important;}
+  .forms-fab{display:block;position:fixed;right:1rem;bottom:76px;z-index:301;background:var(--orange);color:#fff;border:none;border-radius:999px;padding:0.85rem 1.25rem;font-family:'Barlow',sans-serif;font-size:0.78rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,0.3);}
+  .forms-sheet.open{display:block;position:fixed;left:0;right:0;bottom:60px;z-index:302;background:var(--navy);color:#fff;padding:1.25rem 1.25rem 1.5rem;border-top:3px solid var(--orange);max-height:70vh;overflow-y:auto;}
+  .forms-sheet h3{font-family:'Barlow Condensed',sans-serif;font-size:0.8rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--orange2);margin-bottom:1rem;}
+  .forms-sheet a{display:block;color:#fff;text-decoration:none;font-size:0.95rem;font-weight:600;padding:0.8rem 0;border-bottom:1px solid rgba(255,255,255,0.15);}
+  .forms-sheet a:last-of-type{border-bottom:none;}
+  .fs-close{background:none;border:none;color:rgba(255,255,255,0.6);font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;margin-top:1rem;padding:0;}
+}
 </style>
 </head>
 <body>
@@ -403,39 +429,18 @@ footer{background:var(--ink);padding:2.5rem;display:flex;align-items:center;just
     <p style="color:rgba(255,255,255,0.55);font-size:0.95rem;line-height:1.75;max-width:640px;margin-bottom:2.5rem;">Pick the path that matches what you need — each form goes straight to the right place, so nothing gets lost.</p>
     <div class="split-grid reveal">
       <div class="split-card">
-        <span class="split-icon">🏡</span>
-        <h3>Buying or Selling a Home?</h3>
-        <p>Free home valuation, buyer consult, or selling your home — fill in the form right here on this page and I'll reply within a few hours.</p>
+        <span class="split-icon">📋</span>
+        <h3>All Forms in One Place</h3>
+        <p>Buying, selling, refinancing, a purchase pre-approval, or investing — pick the form that matches what you need. Each one opens in a new tab, so nothing gets lost.</p>
         <ul class="split-list">
-          <li>Buying your first or next home</li>
-          <li>Free home valuation / CMA</li>
-          <li>Selling — pricing &amp; marketing plan</li>
+          <li>Buying — Buyer Intake &amp; Purchase Pre-Approval</li>
+          <li>Selling — Seller / Home Valuation</li>
+          <li>Financing — Refinance &amp; Purchase Pre-Approval</li>
+          <li>Investing — Investor Profile</li>
         </ul>
-        <a href="#contact" class="split-cta">Fill In the Form Below →</a>
+        <a href="forms.html" class="split-cta">See All 6 Forms →</a>
       </div>
-      <div class="split-card">
-        <span class="split-icon">💰</span>
-        <h3>Refinancing or a New Mortgage?</h3>
-        <p>Rate/term refi, cash-out, or a purchase loan — tell me about your property and current loan so I can price your options.</p>
-        <ul class="split-list">
-          <li>Lower rate or monthly payment</li>
-          <li>Cash-out refinance</li>
-          <li>Remove PMI / shorten the term</li>
-        </ul>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJwE1PKqHlCCWzbYMReo2yrwthdaWBTBbyh4YqXadU2EBJ8g/viewform" target="_blank" rel="noopener" class="split-cta">Open the Refi Borrower Form →</a>
-      </div>
-      <div class="split-card">
-        <span class="split-icon">📈</span>
-        <h3>Investing in Real Estate?</h3>
-        <p>BRRRR, rentals, flips, or cash-out on your portfolio — tell me about the properties you own. Takes about 3 minutes.</p>
-        <ul class="split-list">
-          <li>Cash-out refinance / HELOC</li>
-          <li>DSCR &amp; bank-statement loans</li>
-          <li>Buy your next investment property</li>
-        </ul>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd07JvKDFbVCaNaCu_t9HRfkJpPGoeym3BCrUSELolXmYru5A/viewform" target="_blank" rel="noopener" class="split-cta">Open the Investor Profile Form →</a>
-      </div>
-    </div>
+    </div>    </div>
   </div>
 </section>
 
@@ -651,6 +656,47 @@ footer{background:var(--ink);padding:2.5rem;display:flex;align-items:center;just
   <a href="tel:+12484217915">📞 Call</a>
   <a class="cta-wa" href="https://wa.me/12484217915" target="_blank" rel="noopener">💬 WhatsApp</a>
 </div>
+
+
+<!-- FORMS PANEL (desktop) + FORMS SHEET (mobile) — one list of 6 forms, no full forms embedded -->
+<aside class="forms-panel" id="forms-panel" aria-label="Forms">
+  <h3>Start a form</h3>
+  <a class="fp-link" href="https://docs.google.com/forms/d/e/1FAIpQLSelerPSSVjtCD8DVpwiesTq2ImWoli3gfru7xZJIa5VRivE_w/viewform" target="_blank" rel="noopener">Buyer Intake</a>
+  <a class="fp-link" href="https://docs.google.com/forms/d/e/1FAIpQLSeLwmBdSCyViLNQVSq5MztukogqBWPkZGEUNGkTQhab26Sw8w/viewform" target="_blank" rel="noopener">Seller / Home Valuation</a>
+  <a class="fp-link" href="https://docs.google.com/forms/d/e/1FAIpQLSd6jg3wfWnXBcvm38tXUTX8wxzrDrJJkt-ZZgfNwEPP1jzpDA/viewform" target="_blank" rel="noopener">Purchase Pre-Approval Intake</a>
+  <a class="fp-link" href="https://docs.google.com/forms/d/e/1FAIpQLSdJwE1PKqHlCCWzbYMReo2yrwthdaWBTBbyh4YqXadU2EBJ8g/viewform" target="_blank" rel="noopener">Refinance — Refi Borrower Profile</a>
+  <a class="fp-link" href="https://docs.google.com/forms/d/e/1FAIpQLSd07JvKDFbVCaNaCu_t9HRfkJpPGoeym3BCrUSELolXmYru5A/viewform" target="_blank" rel="noopener">Investor Profile</a>
+  <a class="fp-link" href="index.html#contact">General Contact</a>
+  <button class="fp-close" type="button" id="forms-panel-close" aria-expanded="true" aria-controls="forms-panel">Hide panel ×</button>
+</aside>
+<button class="forms-tab" type="button" id="forms-tab" hidden aria-expanded="false" aria-controls="forms-panel">Forms</button>
+<button class="forms-fab" type="button" id="forms-fab" aria-expanded="false" aria-controls="forms-sheet">Forms</button>
+<div class="forms-sheet" id="forms-sheet" aria-label="Forms">
+  <h3>Start a form</h3>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSelerPSSVjtCD8DVpwiesTq2ImWoli3gfru7xZJIa5VRivE_w/viewform" target="_blank" rel="noopener">Buyer Intake</a>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLwmBdSCyViLNQVSq5MztukogqBWPkZGEUNGkTQhab26Sw8w/viewform" target="_blank" rel="noopener">Seller / Home Valuation</a>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSd6jg3wfWnXBcvm38tXUTX8wxzrDrJJkt-ZZgfNwEPP1jzpDA/viewform" target="_blank" rel="noopener">Purchase Pre-Approval Intake</a>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJwE1PKqHlCCWzbYMReo2yrwthdaWBTBbyh4YqXadU2EBJ8g/viewform" target="_blank" rel="noopener">Refinance — Refi Borrower Profile</a>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSd07JvKDFbVCaNaCu_t9HRfkJpPGoeym3BCrUSELolXmYru5A/viewform" target="_blank" rel="noopener">Investor Profile</a>
+  <a href="index.html#contact">General Contact</a>
+  <button class="fs-close" type="button" id="forms-sheet-close">Close ×</button>
+</div>
+<script>
+(function(){
+  var panel=document.getElementById('forms-panel'),tab=document.getElementById('forms-tab'),closeBtn=document.getElementById('forms-panel-close');
+  if(panel&&tab&&closeBtn){
+    closeBtn.addEventListener('click',function(){panel.setAttribute('hidden','');tab.removeAttribute('hidden');tab.classList.add('show');tab.setAttribute('aria-expanded','false');});
+    tab.addEventListener('click',function(){panel.removeAttribute('hidden');tab.setAttribute('hidden','');tab.classList.remove('show');tab.setAttribute('aria-expanded','true');});
+  }
+  var fab=document.getElementById('forms-fab'),sheet=document.getElementById('forms-sheet'),sheetClose=document.getElementById('forms-sheet-close');
+  if(fab&&sheet&&sheetClose){
+    fab.addEventListener('click',function(){var open=sheet.classList.toggle('open');fab.setAttribute('aria-expanded',open?'true':'false');});
+    sheetClose.addEventListener('click',function(){sheet.classList.remove('open');fab.setAttribute('aria-expanded','false');});
+    sheet.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){sheet.classList.remove('open');fab.setAttribute('aria-expanded','false');});});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'){sheet.classList.remove('open');fab.setAttribute('aria-expanded','false');}});
+  }
+})();
+</script>
 
 <script>
 const els = document.querySelectorAll('.reveal');

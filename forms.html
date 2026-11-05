@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>All Forms | Girish Jain, Realtor | Tesla Realty Group</title>
+<meta name="description" content="All forms in one place: Buyer Intake, Seller Valuation, Purchase Pre-Approval, Refinance, Investor Profile, and General Contact — Girish Jain, Tesla Realty Group."/>
+<meta property="og:title" content="All Forms | Girish Jain, Realtor"/>
+<meta property="og:description" content="Pick the form that matches what you need: buying, selling, refinancing, pre-approval, or investing."/>
+<meta property="og:url" content="https://girishjainrealtor.com/forms.html"/>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DVB6N9TYKC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-DVB6N9TYKC');
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{--navy:#0f1f3d;--orange:#e8440a;--orange2:#ff6b35;--cream:#faf6ef;--white:#fff;--ink:#0d0d0d;--muted:#7a7060;--border:#e0d8cc;--slate:#1a2d50;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Barlow',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;background:var(--navy);display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;color:#fff;letter-spacing:0.06em;line-height:1;text-decoration:none;}
+.nav-logo span{font-family:'Barlow',sans-serif;font-size:0.58rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--orange2);display:block;}
+.nav-links{display:flex;list-style:none;}
+.nav-links a{color:rgba(255,255,255,0.55);text-decoration:none;font-size:0.7rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;padding:0 1rem;height:60px;display:flex;align-items:center;}
+.nav-links a:hover{color:#fff;}
+section{padding:3.5rem 2.5rem;}
+.sec-inner{max-width:1100px;margin:0 auto;}
+.sec-ey{font-family:'Barlow Condensed',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--orange);margin-bottom:0.6rem;display:flex;align-items:center;gap:0.6rem;}
+.sec-ey::before{content:'';width:18px;height:3px;background:var(--orange);flex-shrink:0;}
+.sec-h{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,4vw,4rem);line-height:0.95;letter-spacing:0.02em;margin-bottom:1rem;}
+.sec-h .acc{color:var(--orange);}
+.sec-body{color:var(--muted);line-height:1.8;font-size:0.95rem;max-width:640px;}
+.forms-hero{background:var(--navy);color:#fff;padding:8rem 2.5rem 4rem;}
+.forms-hero .sec-body{color:rgba(255,255,255,0.6);}
+.forms-hero .sec-h{color:#fff;}
+.forms-note{color:rgba(255,255,255,0.55);font-size:0.9rem;line-height:1.7;max-width:640px;margin-top:1.5rem;}
+section#general .forms-note, section .forms-note.dark{color:var(--muted);}
+.group-h{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,3.5vw,3rem);line-height:1;margin-bottom:1.5rem;}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
+.form-card{background:#fff;border:2px solid var(--border);padding:2rem;}
+.form-card h3{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;margin-bottom:0.5rem;line-height:1.1;}
+.form-card p{color:var(--muted);line-height:1.75;font-size:0.95rem;margin-bottom:1.25rem;}
+.form-note{font-family:'Barlow',sans-serif;font-size:0.75rem;font-weight:600;letter-spacing:0.05em;color:var(--orange);}
+.btn-orange{display:inline-block;background:var(--orange);color:#fff;padding:0.9rem 1.8rem;font-size:0.75rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;}
+.btn-orange:hover{background:var(--orange2);}
+footer{background:var(--ink);padding:2.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.f-logo{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;color:#fff;}
+.f-logo span{font-family:'Barlow',sans-serif;font-size:0.58rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--orange2);display:block;}
+.f-copy{font-size:0.65rem;color:rgba(255,255,255,0.3);line-height:1.8;}
+.sticky-cta{display:none;}
+/* FORMS PANEL + MOBILE FORMS SHEET — added on forms-hub branch */
+.forms-panel{position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:250;width:216px;background:var(--navy);border-left:3px solid var(--orange);color:#fff;padding:1rem 1rem 1.1rem;box-shadow:-4px 0 24px rgba(0,0,0,0.25);}
+.forms-panel[hidden]{display:none;}
+.forms-panel h3{font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--orange2);margin-bottom:0.75rem;}
+.forms-panel a.fp-link{display:block;color:#fff;text-decoration:none;font-size:0.82rem;font-weight:600;line-height:1.35;padding:0.55rem 0.6rem;border:1px solid rgba(255,255,255,0.18);margin-bottom:0.45rem;}
+.forms-panel a.fp-link:hover{background:var(--orange);border-color:var(--orange);}
+.forms-panel a.fp-link:last-of-type{margin-bottom:0.75rem;}
+.fp-close{background:none;border:none;color:rgba(255,255,255,0.6);font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;padding:0;}
+.fp-close:hover{color:#fff;}
+.forms-tab{display:none;position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:250;background:var(--orange);color:#fff;border:none;font-family:'Barlow',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;writing-mode:vertical-rl;padding:1rem 0.55rem;cursor:pointer;}
+.forms-tab[hidden]{display:none;}
+.forms-fab{display:none;}
+.forms-sheet{display:none;}
+@media(min-width:881px){
+  .forms-tab.show{display:block;}
+}
+@media(max-width:880px){
+  .forms-panel,.forms-tab{display:none!important;}
+  .forms-fab{display:block;position:fixed;right:1rem;bottom:76px;z-index:301;background:var(--orange);color:#fff;border:none;border-radius:999px;padding:0.85rem 1.25rem;font-family:'Barlow',sans-serif;font-size:0.78rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,0.3);}
+  .forms-sheet.open{display:block;position:fixed;left:0;right:0;bottom:60px;z-index:302;background:var(--navy);color:#fff;padding:1.25rem 1.25rem 1.5rem;border-top:3px solid var(--orange);max-height:70vh;overflow-y:auto;}
+  .forms-sheet h3{font-family:'Barlow Condensed',sans-serif;font-size:0.8rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--orange2);margin-bottom:1rem;}
+  .forms-sheet a{display:block;color:#fff;text-decoration:none;font-size:0.95rem;font-weight:600;padding:0.8rem 0;border-bottom:1px solid rgba(255,255,255,0.15);}
+  .forms-sheet a:last-of-type{border-bottom:none;}
+  .fs-close{background:none;border:none;color:rgba(255,255,255,0.6);font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;margin-top:1rem;padding:0;}
+}
+
+@media(max-width:880px){
+  nav{padding:0 1.25rem;}
+  .nav-links{display:none;}
+  section{padding:2.5rem 1.25rem;}
+  .forms-hero{padding:6rem 1.25rem 3rem;}
+  .form-grid{grid-template-columns:1fr;}
+  footer{flex-direction:column;text-align:center;}
+  body{padding-bottom:60px;}
+  .sticky-cta{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:300;background:var(--navy);border-top:2px solid var(--orange);}
+  .sticky-cta a{flex:1;text-align:center;color:#fff;text-decoration:none;font-size:0.8rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:1.05rem 0.5rem;}
+  .sticky-cta a:first-child{border-right:1px solid rgba(255,255,255,0.15);}
+  .sticky-cta a.cta-wa{background:var(--orange);}
+}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html">Girish Jain<span>Tesla Realty Group</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#services">Buy / Sell</a></li>
+    <li><a href="index.html#loans">Loans</a></li>
+    <li><a href="index.html#contact">Get in Touch →</a></li>
+  </ul>
+</nav>
+
+<section class="forms-hero">
+  <div class="sec-inner">
+    <p class="sec-ey">Forms</p>
+    <h1 class="sec-h">All Forms, <span class="acc">One Place.</span></h1>
+    <p class="sec-body">Pick the form that matches what you need. Each form opens in a new tab — no full forms are embedded here, so this page stays light and uncluttered. I reply within a few hours.</p>
+  </div>
+</section>
+
+<section id="buying">
+  <div class="sec-inner">
+    <h2 class="group-h">Buying</h2>
+    <div class="form-grid">
+      <article class="form-card">
+  <h3>Buyer Intake</h3>
+  <p>Tell me what you are looking for — areas, price range, timeline, and whether you are pre-approved — so I can match it against Bright MLS, including off-market homes where they fit.</p>
+  <a class="btn-orange" href="https://docs.google.com/forms/d/e/1FAIpQLSelerPSSVjtCD8DVpwiesTq2ImWoli3gfru7xZJIa5VRivE_w/viewform" target="_blank" rel="noopener">Open this form →</a>
+</article>
+      <article class="form-card">
+  <h3>Purchase Pre-Approval Intake</h3>
+  <p>Start a purchase pre-approval with Loan Factory (NMLS #2862446). Intake only — no Social Security number, bank account numbers, or documents are collected here.</p>
+  <a class="btn-orange" href="https://docs.google.com/forms/d/e/1FAIpQLSd6jg3wfWnXBcvm38tXUTX8wxzrDrJJkt-ZZgfNwEPP1jzpDA/viewform" target="_blank" rel="noopener">Open this form →</a>
+</article>
+    </div>
+  </div>
+</section>
+
+<section id="selling">
+  <div class="sec-inner">
+    <h2 class="group-h">Selling</h2>
+    <div class="form-grid">
+      <article class="form-card">
+  <h3>Seller / Home Valuation</h3>
+  <p>Get a free, no-obligation market analysis — typically within 24 hours. Tell me about the property, its condition, and your timeline.</p>
+  <a class="btn-orange" href="https://docs.google.com/forms/d/e/1FAIpQLSeLwmBdSCyViLNQVSq5MztukogqBWPkZGEUNGkTQhab26Sw8w/viewform" target="_blank" rel="noopener">Open this form →</a>
+</article>
+    </div>
+  </div>
+</section>
+
+<section id="financing">
+  <div class="sec-inner">
+    <h2 class="group-h">Financing</h2>
+    <div class="form-grid">
+      <article class="form-card">
+  <h3>Refinance — Refi Borrower Profile</h3>
+  <p>Rate/term refinance, cash-out, or a purchase loan — tell me about your property and current loan so I can price your options.</p>
+  <a class="btn-orange" href="https://docs.google.com/forms/d/e/1FAIpQLSdJwE1PKqHlCCWzbYMReo2yrwthdaWBTBbyh4YqXadU2EBJ8g/viewform" target="_blank" rel="noopener">Open this form →</a>
+</article>
+    </div>
+  </div>
+</section>
+
+<section id="investing">
+  <div class="sec-inner">
+    <h2 class="group-h">Investing</h2>
+    <div class="form-grid">
+      <article class="form-card">
+  <h3>Investor Profile</h3>
+  <p>BRRRR, rentals, flips, or cash-out on your portfolio — tell me about the properties you own. Takes about 3 minutes.</p>
+  <a class="btn-orange" href="https://docs.google.com/forms/d/e/1FAIpQLSd07JvKDFbVCaNaCu_t9HRfkJpPGoeym3BCrUSELolXmYru5A/viewform" target="_blank" rel="noopener">Open this form →</a>
+</article>
+    </div>
+  </div>
+</section>
+
+<section id="general">
+  <div class="sec-inner">
+    <h2 class="group-h">Anything Else</h2>
+    <div class="form-grid">
+      <article class="form-card">
+  <h3>General Contact</h3>
+  <p>A general message — buying, selling, investing, or anything else. Fill it in on the homepage and I reply within a few hours.</p>
+  <a class="btn-orange" href="index.html#contact">Open this form →</a>
+</article>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-logo">Girish Jain<span>Tesla Realty Group · Licensed PA &amp; DE</span></div>
+  <div class="f-copy">© 2026 Girish Jain · 941 N Providence Rd, Media PA 19063<br/>Mortgage Loan Officer · Loan Factory · NMLS #2862446<br/>(248) 421-7915 · girishjainrealtor@gmail.com</div>
+</footer>
+<div class="sticky-cta">
+  <a href="tel:+12484217915">📞 Call</a>
+  <a class="cta-wa" href="https://wa.me/12484217915" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
+<!-- FORMS PANEL (desktop) + FORMS SHEET (mobile) — one list of 6 forms, no full forms embedded -->
+<aside class="forms-panel" id="forms-panel" aria-label="Forms">
+  <h3>Start a form</h3>
+  <a class="fp-link" href="https://docs.google.com/forms/d/e/1FAIpQLSelerPSSVjtCD8DVpwiesTq2ImWoli3gfru7xZJIa5VRivE_w/viewform" target="_blank" rel="noopener">Buyer Intake</a>
+  <a class="fp-link" href="https://docs.google.com/forms/d/e/1FAIpQLSeLwmBdSCyViLNQVSq5MztukogqBWPkZGEUNGkTQhab26Sw8w/viewform" target="_blank" rel="noopener">Seller / Home Valuation</a>
+  <a class="fp-link" href="https://docs.google.com/forms/d/e/1FAIpQLSd6jg3wfWnXBcvm38tXUTX8wxzrDrJJkt-ZZgfNwEPP1jzpDA/viewform" target="_blank" rel="noopener">Purchase Pre-Approval Intake</a>
+  <a class="fp-link" href="https://docs.google.com/forms/d/e/1FAIpQLSdJwE1PKqHlCCWzbYMReo2yrwthdaWBTBbyh4YqXadU2EBJ8g/viewform" target="_blank" rel="noopener">Refinance — Refi Borrower Profile</a>
+  <a class="fp-link" href="https://docs.google.com/forms/d/e/1FAIpQLSd07JvKDFbVCaNaCu_t9HRfkJpPGoeym3BCrUSELolXmYru5A/viewform" target="_blank" rel="noopener">Investor Profile</a>
+  <a class="fp-link" href="index.html#contact">General Contact</a>
+  <button class="fp-close" type="button" id="forms-panel-close" aria-expanded="true" aria-controls="forms-panel">Hide panel ×</button>
+</aside>
+<button class="forms-tab" type="button" id="forms-tab" hidden aria-expanded="false" aria-controls="forms-panel">Forms</button>
+<button class="forms-fab" type="button" id="forms-fab" aria-expanded="false" aria-controls="forms-sheet">Forms</button>
+<div class="forms-sheet" id="forms-sheet" aria-label="Forms">
+  <h3>Start a form</h3>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSelerPSSVjtCD8DVpwiesTq2ImWoli3gfru7xZJIa5VRivE_w/viewform" target="_blank" rel="noopener">Buyer Intake</a>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLwmBdSCyViLNQVSq5MztukogqBWPkZGEUNGkTQhab26Sw8w/viewform" target="_blank" rel="noopener">Seller / Home Valuation</a>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSd6jg3wfWnXBcvm38tXUTX8wxzrDrJJkt-ZZgfNwEPP1jzpDA/viewform" target="_blank" rel="noopener">Purchase Pre-Approval Intake</a>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJwE1PKqHlCCWzbYMReo2yrwthdaWBTBbyh4YqXadU2EBJ8g/viewform" target="_blank" rel="noopener">Refinance — Refi Borrower Profile</a>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSd07JvKDFbVCaNaCu_t9HRfkJpPGoeym3BCrUSELolXmYru5A/viewform" target="_blank" rel="noopener">Investor Profile</a>
+  <a href="index.html#contact">General Contact</a>
+  <button class="fs-close" type="button" id="forms-sheet-close">Close ×</button>
+</div>
+<script>
+(function(){
+  var panel=document.getElementById('forms-panel'),tab=document.getElementById('forms-tab'),closeBtn=document.getElementById('forms-panel-close');
+  if(panel&&tab&&closeBtn){
+    closeBtn.addEventListener('click',function(){panel.setAttribute('hidden','');tab.removeAttribute('hidden');tab.classList.add('show');tab.setAttribute('aria-expanded','false');});
+    tab.addEventListener('click',function(){panel.removeAttribute('hidden');tab.setAttribute('hidden','');tab.classList.remove('show');tab.setAttribute('aria-expanded','true');});
+  }
+  var fab=document.getElementById('forms-fab'),sheet=document.getElementById('forms-sheet'),sheetClose=document.getElementById('forms-sheet-close');
+  if(fab&&sheet&&sheetClose){
+    fab.addEventListener('click',function(){var open=sheet.classList.toggle('open');fab.setAttribute('aria-expanded',open?'true':'false');});
+    sheetClose.addEventListener('click',function(){sheet.classList.remove('open');fab.setAttribute('aria-expanded','false');});
+    sheet.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){sheet.classList.remove('open');fab.setAttribute('aria-expanded','false');});});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'){sheet.classList.remove('open');fab.setAttribute('aria-expanded','false');}});
+  }
+})();
+</script>
+</body>
+</html>

@@ -48,7 +48,7 @@
 <style>
 :root {
   --navy: #0f1f3d;
-  --orange: #e8440a;
+  --orange: #D95D0C;
   --orange2: #ff6b35;
   --cream: #faf6ef;
   --white: #fff;
@@ -73,24 +73,24 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;background:var(-
 .nav-cta:hover{background:var(--orange2)!important;}
 
 /* HERO */
-.hero{min-height:100vh;background:var(--navy);display:grid;grid-template-columns:1fr;padding-top:60px;position:relative;overflow:hidden;}
+.hero{min-height:100vh;background:#FBF3E3;display:grid;grid-template-columns:1fr;padding-top:60px;position:relative;overflow:hidden;}
 .hero-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(15,31,61,0.04)1px,transparent 1px),linear-gradient(90deg,rgba(15,31,61,0.04)1px,transparent 1px);background-size:50px 50px;pointer-events:none;}
 .hero-left{padding:4rem 3rem 3rem 3rem;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2;}
-.hero-tag{font-size:0.68rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--orange2);margin-bottom:1.25rem;display:flex;align-items:center;gap:0.75rem;opacity:0;animation:fadeUp 0.6s 0.1s forwards;}
+.hero-tag{font-size:0.68rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--orange);margin-bottom:1.25rem;display:flex;align-items:center;gap:0.75rem;opacity:0;animation:fadeUp 0.6s 0.1s forwards;}
 .hero-tag::before{content:'';width:20px;height:3px;background:var(--orange);flex-shrink:0;}
-.hero-h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(4rem,7vw,7.5rem);line-height:0.92;color:#fff;letter-spacing:0.01em;margin-bottom:1.25rem;opacity:0;animation:fadeUp 0.6s 0.25s forwards;}
+.hero-h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(4rem,7vw,7.5rem);line-height:0.92;color:var(--navy);letter-spacing:0.01em;margin-bottom:1.25rem;opacity:0;animation:fadeUp 0.6s 0.25s forwards;}
 .hero-h1 .accent{color:var(--orange);display:block;}
-.hero-sub{font-size:1rem;color:rgba(255,255,255,0.55);max-width:440px;line-height:1.75;font-weight:300;margin-bottom:2rem;opacity:0;animation:fadeUp 0.6s 0.4s forwards;}
+.hero-sub{font-size:1rem;color:var(--muted);max-width:440px;line-height:1.75;font-weight:300;margin-bottom:2rem;opacity:0;animation:fadeUp 0.6s 0.4s forwards;}
 
 /* HERO — inline lead form */
-.hero-form-wrap{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);padding:1.75rem;max-width:480px;opacity:0;animation:fadeUp 0.6s 0.55s forwards;}
-.hero-form-wrap h3{font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#fff;margin-bottom:1.25rem;}
+.hero-form-wrap{background:#fff;border:1px solid var(--border);padding:1.75rem;max-width:480px;opacity:0;animation:fadeUp 0.6s 0.55s forwards;}
+.hero-form-wrap h3{font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);margin-bottom:1.25rem;}
 .hf-row{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:0.75rem;}
 .hf-group{display:flex;flex-direction:column;gap:0.3rem;}
-.hf-group label{font-size:0.58rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.4);}
-.hf-group input,.hf-group select{background:rgba(255,255,255,0.08);border:none;border-bottom:2px solid rgba(255,255,255,0.15);color:#fff;padding:0.65rem 0.75rem;font-family:'Barlow',sans-serif;font-size:0.85rem;outline:none;transition:border-color 0.15s;width:100%;}
+.hf-group label{font-size:0.58rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);}
+.hf-group input,.hf-group select{background:#faf6ef;border:none;border-bottom:2px solid var(--border);color:var(--ink);padding:0.65rem 0.75rem;font-family:'Barlow',sans-serif;font-size:0.85rem;outline:none;transition:border-color 0.15s;width:100%;}
 .hf-group input:focus,.hf-group select:focus{border-bottom-color:var(--orange);}
-.hf-group select option{background:var(--slate);}
+.hf-group select option{background:#fff;}
 .hf-submit{margin-top:0.75rem;background:var(--orange);color:#fff;border:none;padding:0.9rem 2rem;font-family:'Barlow',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;cursor:pointer;transition:background 0.15s;width:100%;}
 .hf-submit:hover{background:var(--orange2);}
 
